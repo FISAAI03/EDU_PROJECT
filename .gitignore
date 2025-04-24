@@ -1,5 +1,6 @@
 .env
 __pycache__
+debug_logs/
 
 #가상환경 무시 _지연
 edu_project/
