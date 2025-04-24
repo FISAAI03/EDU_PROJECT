@@ -72,6 +72,7 @@ def fetch_schools():
     print(f"✅ 총 수집 개수: {len(all_results)}")
     return all_results
 
+
 # 저장 로직 (school_type_2 제거)
 def save_schools_to_mysql(conn, data):
     with conn.cursor() as cur:
@@ -110,7 +111,7 @@ def save_schools_to_mysql(conn, data):
             """, batch)
             conn.commit()
             print(f"✅ 최종 저장 완료: {len(data)}개")
-
+            
 # 실행 함수
 def run_school_etl():
     parsed = parse_mysql_uri(mysql_uri)
